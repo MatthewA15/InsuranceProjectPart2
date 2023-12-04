@@ -1,0 +1,118 @@
+/* public/claims.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2d2d; /* Professional grey background */
+  color: #fff; /* Professional white text color */
+}
+
+header {
+  background-color: #1a1a1a; /* Dark grey header background */
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.claims-section {
+  display: flex;
+  flex-direction: column; /* Change to column to stack elements vertically */
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.claim-form,
+.claim-list {
+  width: 100%; /* Set the width to 100% to occupy the full width of the container */
+  margin-top: 20px;
+  text-align: center; /* Center text in the claim form and list */
+}
+
+.claim-list h3 {
+  margin-bottom: 20px;
+}
+
+.claim-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.claim-list li {
+  border: 1px solid #444; /* Darker border color */
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #333; /* Dark background color */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.claim-list button {
+  background-color: #4c87af;
+  color: #fff;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.claim-list button:hover {
+  background-color: #78a9ca;
+}
+
+footer {
+  background-color: #1a1a1a; /* Dark grey footer background */
+  color: #fff;
+  padding: 0.25rem;
+  text-align: center; /* Center text in the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Set the width to your desired percentage */
+}
+.claim-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column; /* Change from row to column */
+}
+
+.claim-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.claim-form label {
+  margin-bottom: 5px;
+}
+
+.claim-form input,
+.claim-form textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+}

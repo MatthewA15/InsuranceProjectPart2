@@ -1,0 +1,82 @@
+<!-- views/claims.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claims</title>
+    <link rel="stylesheet" href="/claims.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>FHM's Insurance</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/claims">Claims</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="claims-section">
+    <h2>Your Insurance Claims</h2>
+
+    <div class="claim-form">
+        <h3>Submit a New Claim</h3>
+        <form action="/claims/submit" method="post">
+            <!-- Title -->
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <!-- Description -->
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <!-- Submit button -->
+            <button type="submit">Submit Claim</button>
+        </form>
+    </div>
+
+    <div class="claim-list">
+        <h3>Your Claims</h3>
+        <% if (claims && claims.length > 0) { %>
+            <ul>
+                <% claims.forEach(claim => { %>
+                    <li>
+                        <h3><%= claim.title %></h3>
+                        <p><strong>Description:</strong><br><%= claim.description %></p>
+                        <!-- Add other claim details as needed -->
+
+                        <!-- Form for deleting a claim -->
+                        <form onsubmit="return confirm('Are you sure you want to delete this claim?');" action="/claims/delete/<%= claim._id %>" method="post">
+                            <button type="submit">Delete</button>
+                        </form>
+
+                        <!-- Form for editing a claim -->
+                        <form action="/claims/edit/<%= claim._id %>" method="get">
+                            <button type="submit">Edit</button>
+                        </form>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No claims found.</p>
+        <% } %>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2023 FHM's Insurance Company | Contact us: <a href="mailto:fhminsurance@gmail.com">fhminsurance@gmail.com</a> | Phone: +1 (888) 343-4567</p>
+    </div>
+</footer>
+
+</body>
+</html>

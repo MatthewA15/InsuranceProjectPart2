@@ -1,0 +1,64 @@
+/* public/about.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2d2d; /* Professional grey background */
+  color: #fff; /* Professional white text color */
+}
+
+header {
+  background-color: #1a1a1a; /* Dark grey header background */
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center; /* Center text in the about content */
+}
+
+footer {
+  background-color: #1a1a1a; /* Dark grey footer background */
+  color: #fff;
+  text-align: left;
+  padding: 0.25rem;
+  text-align: center; /* Center text in the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

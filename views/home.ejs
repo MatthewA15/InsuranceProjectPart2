@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FHM's Insurance</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>FHM's Insurance</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/claims">Claims</a></li>
+                    <li><a href="/contact">Contact</a></li>
+
+                    <% if (user) { %>
+                        <li><a href="/logout">Logout</a></li>
+                    <% } else { %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <img src="/images/fhmLOGOInsurance.png" alt="Insurance LOGO" style="display: block; margin-left: auto; margin-right: auto; margin-top: 43px;">
+
+    <section>
+        <h1>"Where Trust Meets Assurance"</h1>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 FHM's Insurance | Contact us: <a href="mailto:fhminsurance@gmail.com">fhminsurance@gmail.com</a> | Phone: +1 (888) 343-4567</p>
+        </div>
+    </footer>
+
+    <div class="user-section">
+        <% if (user) { %>
+            <h1>Welcome, <%= user.username %>!</h1>
+            <a href="/logout">Logout</a>
+        <% } else { %>
+            <p>You are not logged in. <a href="/login">Login</a> or <a href="/register">Register</a>.</p>
+        <% } %>
+    </div>
+</body>
+</html>

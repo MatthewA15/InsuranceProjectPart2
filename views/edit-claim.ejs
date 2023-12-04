@@ -1,0 +1,51 @@
+<!-- views/edit-claim.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Claim</title>
+  <link rel="stylesheet" href="/claims.css"> 
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+        <h1>FHM's Insurance</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/claims">Claims</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+  </header>
+
+    <section>
+        <h1>Edit Claim</h1>
+    </section>
+
+  <div class="claims-section">
+    <div class="claim-form">
+      <form action="/claims/update/<%= claim._id %>" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%= claim.title %>" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required><%= claim.description %></textarea>
+
+        <button type="submit">Update Claim</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 FHM's Insurance</p>
+  </footer>
+
+</body>
+</html>

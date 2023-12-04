@@ -1,0 +1,75 @@
+/* public/services.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2d2d; /* Professional grey background */
+  color: #fff; /* Professional white text color */
+}
+
+
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.services-section {
+  padding: 20px;
+  text-align: center; /* Center text in the services section */
+}
+
+.service {
+  border: 1px solid #444; /* Darker border color */
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+}
+
+.service h3 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #1a1a1a; /* Dark grey footer background */
+  color: #fff;
+  padding: 0.25rem;
+  text-align: center; /* Center text in the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Set the width to your desired percentage */
+}
+
+.small-image {
+  max-width: 100px; /* Adjust the width as needed */
+  max-height: 100px; /* Adjust the height as needed */
+  display: block; /* This ensures the image is properly displayed */
+  margin: 0 auto; /* This centers the image in its container */
+}
+
